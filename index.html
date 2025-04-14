@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta name="keywords" content="" />
+        
+        <!-- Page Title -->
+        <!-- TODO: Change Project Name -->
+        <title>Video-MMLU</title>
+
+        <!-- Favicons -->
+        <!-- TODO: Add favicons -->
+        <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/icon.svg">
+        <link rel="icon" type="image/svg" sizes="32x32" href="assets/img/favicons/icon.svg">
+        <link rel="icon" type="image/svg" sizes="16x16" href="assets/img/favicons/icon.svg">
+        <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="aassets/img/favicons/icon.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff"> -->
+
+        <!-- HTML Meta Tags -->
+        <meta name="description" content="Video-MMLU pushes LMMs to the limits—can the model really understand real-world lectures?">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://enxinsong.com/Video-MMLU-web/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Video-MMLU: A Massive Multi-Discipline Lecture Understanding Benchmark">
+        <meta property="og:description" content="Video-MMLU pushes LMMs to the limits—can the model really understand real-world lectures?">
+        <meta property="og:image" content="https://enxinsong.com/Video-MMLU-web/assets/img/figures/teaser.jpg">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="enxinsong.com">
+        <meta property="twitter:url" content="https://enxinsong.com/Video-MMLU-web/">
+        <meta name="twitter:title" content="Video-MMLU: A Massive Multi-Discipline Lecture Understanding Benchmark">
+        <meta name="twitter:description" content="Video-MMLU pushes LMMs to the limits—can the model really understand real-world lectures?">
+        <meta name="twitter:image" content="https://enxinsong.com/Video-MMLU-web/assets/img/figures/teaser.jpg">
+
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="assets/vendor/jquery.mb.vimeo_player/dist/css/jquery.mb.vimeo_player.min.css" rel="stylesheet">
+        <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="assets/css/theme.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+
+        <!-- Tabulator library -->
+        <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bootstrap4.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
+
+        <!-- Benchmark Table -->
+        <script src="assets/js/benchmark_table.js" type="module"></script>
+
+        <!-- Sliding Video -->
+        <script src="assets/js/auto-scroll.js"></script>
+        <script src="assets/js/auto-scroll-alt.js"></script>    
+
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+      
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay overlay-dark-70 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/test/pexels-jeshoots-com-147458-714698.jpg);"></div>
+                
+                
+                <div class="container">
+                    <div class="row h-100vh justify-content-center align-items-center">
+                        <div class="col-xxl-auto">
+                            <!-- TODO: Change Project Name -->
+                            <h1 class="text-white fs-9 fs-lg-9" data-aos="fade-left" data-aos-duration="500">Video-MMLU</h1>
+                            <br>
+                            <h2 class="text-white fs-5 fs-lg-5" data-aos="fade-left" data-aos-duration="500">A Massive Multi-Discipline Lecture Understanding Benchmark</h2>
+                            <br>
+                            <p class="mb-5 fs-lg-1 text-white" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500">
+                                <!-- TODO: Add Conference Name -->
+                            </p>
+
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <a href="TODO: https://arxiv.org/abs/" class="btn btn-primary mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">arXiv</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="https://github.com/Espere-1119-Song/Video-MMLU" class="btn btn-light mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">GitHub</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="https://huggingface.co/datasets/Enxin/Video-MMLU" class="btn btn-warning mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">Huggingface</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="move d-none d-lg-block">
+                            <a href="#section-1" class="text-white" data-smooth-scroll data-smooth-scroll-hash="true">
+                                <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Author List -->
+            <section id="section-1" class="py-3">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-2 text-center mb-3">
+                            <p style="font-size: 24px; margin: 0"><strong><a href="https://enxinsong.com/" style="text-decoration: none; color: inherit;">Enxin Song</a></strong></p>
+                            <p class="mb-0">Zhejiang University</p>
+                        </div>
+                        <div class="col-md-2 text-center mb-3">
+                            <p style="font-size: 24px; margin: 0;"><strong><a href="https://www.wenhaochai.com" style="text-decoration: none; color: inherit;">Wenhao Chai</a></strong></p>
+                            <p style="margin: 0;">University of Washington</p>
+                        </div>
+                        <div class="col-md-2 text-center mb-3">
+                            <p style="font-size: 24px; margin: 0"><strong><a href="https://weili-0234.github.io/" style="text-decoration: none; color: inherit;">Weili Xu</a></strong></p>
+                            <p class="mb-0">UIUC</p>
+                        </div>
+                        <div class="col-md-2 text-center mb-3">
+                            <p style="font-size: 24px; margin: 0"><strong><a href="http://www.stat.ucla.edu/~jxie/" style="text-decoration: none; color: inherit;">Jianwen Xie</a></strong></p>
+                            <p class="mb-0">Lambda, Inc.</p>
+                        </div>
+                        <div class="col-md-2 text-center mb-3">
+                            <p style="font-size: 24px; margin: 0"><strong><a href="#" style="text-decoration: none; color: inherit;">Yuxuan Liu</a></strong></p>
+                            <p class="mb-0">UIUC</p>
+                        </div>
+                        <div class="col-md-2 text-center mb-3">
+                            <p style="font-size: 24px; margin: 0"><strong><a href="https://cvnext.github.io/" style="text-decoration: none; color: inherit;">Gaoang Wang</a></strong></p>
+                            <p class="mb-0">Zhejiang University</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- School Logos -->
+            <section class="py-2 text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-auto mx-3">
+                            <img src="assets/img/logo/zju_logo.png" alt="Zhejiang University Logo" style="max-height: 50px;">
+                        </div>
+                        <hr>
+                        <div class="col-auto mx-3">
+                            <img src="assets/img/logo/uw_logo.png" alt="UW Logo" style="max-height: 45px;">
+                        </div>
+                        <hr>
+                        <div class="col-auto mx-3">
+                            <img src="assets/img/logo/uiuc_logo.png" alt="UIUC Logo" style="max-height: 35px;">
+                        </div>
+                        <hr>
+                        <div class="col-auto mx-3">
+                            <img src="assets/img/logo/lambda_logo.png" alt="Lambda Inc. Logo" style="max-height: 40px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section id="abstract" class="py-5 bg-light">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <h4 class="blockquote text-primary mb-4">
+                                    Video-MMLU pushes LMMs to the limits—can the model really understand real-world lectures?
+                                </h4>
+                                <div class="col-md-6 mb-6">
+                                    <a class="card-link" href="#leaderboard">
+                                        <div class="card card-info h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Leaderboard</h4>
+                                                <p class="card-text">We evaluate more than 90 proprietary models and open-source models of varying sizes on Video-
+                                                    MMLU. Our findings indicate that existing models generally perform poorly, with accuracy
+                                                    lower than 50%.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-6">
+                                    <a class="card-link" href="#findings">
+                                        <div class="card card-info h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Findings</h4>
+                                                <p class="card-text">We explore how the number of visual tokens and the base LLMs influence performance, offering
+                                                    insights into the interplay between multimodal perception and reasoning in lecture comprehension.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <img src="assets/img/figures/teaser.jpg" alt="" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Demo Video -->
+            <section id="video" class="py-5">
+                <video id="teaser" autoplay muted loop playsinline controls width="100%">
+                    <source src="./website/videos/eai-video-v2.mov" type="video/quicktime">
+                    <source src="assets/vid/teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+
+            <!-- Leaderboard -->
+            <section id="leaderboard" class="py-5">
+                <div class="container">
+                    <h2 class="text-center py-5">Leaderboard</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center;">🤩 Welcome to the Video-MMLU lecture hall! Is your model ready to be tested?</h5>
+                            <br>
+                            <h5 style="text-align: center;">Class is in session! Submit your scores to see if your models make the honor roll. Professor is waiting...</h5>
+                            <br>
+                            <p class="card-text" style="text-align: center;">
+                                Please remember to report your frame rate and tokens per frame with each submission.
+                                Email us at <a href="mailto:enxin.23 at intl.zju.edu.cn"><i class="fas fa-envelope"></i></a> or <a href="mailto:wchai at uw.edu"><i class="fas fa-envelope"></i></a>.
+                            </p>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="benchmark-table-content" role="tabpanel"
+                                    aria-labelledby="benchmark-table-content">
+                                    <div id="behavior-benchmark-main-table"></div>
+                                </div>
+                            </div>
+                            <p class="card-text" style="font-size: 0.9em; color: #6c757d;">
+                                #F stands for the frame sampling number of the input video, and #T stands for the visual tokens per frame. 
+                            </p>
+                            <p class="card-text" style="font-size: 0.9em; color: #6c757d;">
+                                Models marked with <i class="fas fa-box-open" style="color: green;"></i> are open-source, those marked with <i class="fas fa-lock" style="color: #DAA520;"></i> are proprietary, and those marked with <i class="fas fa-brain" style="color: blue;"></i> are base LLMs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Findings -->
+            <section id="findings" class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center py-5">Findings</h2>
+                    <div>
+                        <div class="row mb-4">
+                            <div class="col-md-12 mb-4 mb-md-0"> <!-- Second card takes half width, add margin for small screens -->
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Large scale LMMs do not show clear advantages over smaller ones.</h5>
+                                        <p class="card-text">
+                                            Although LMM scaling laws suggest significant performance improvements with increased model size, this trend is less pronounced in Video-MMLU.
+                                            Model size shows a stronger correlation with performance in video QA compared to video captioning, implying reasoning benefits more from scaling.
+                                        </p>
+                                    </div>
+                                    <img src="assets/img/figures/find_4.png" class="card-img-top" alt="Finding 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12 mb-4 mb-md-0"> <!-- Second card takes half width, add margin for small screens -->
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"> LLM Architecture shapes LMMs' balance between perception and reasoning.</h5>
+                                        <p class="card-text">
+                                            Most models excel in captioning over QA, highlighting the greater reasoning challenge lecture QA in Video-MMLU. 
+                                            LMMs built on Qwen2.5 and InternLM2.5 achieve strong and balanced performance, while MoE-based LLMs also perform well. 
+                                            Earlier architectures like Vicuna and LLaMA2 perform poorly in QA for its weaker reasoning and instruction-following capabilities. 
+                                        </p>
+                                    </div>
+                                    <img src="assets/img/figures/find_6.png" class="card-img-top" alt="Finding 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12 mb-4 mb-md-0"> <!-- Second card takes half width, add margin for small screens -->
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"> Can LMMs with visual token compression sustain strong performance in complex, context-rich lecture understanding tasks like Video-MMLU? </h5>
+                                        <p class="card-text">
+                                            <ol class="card-text">
+                                                <li>Token compression boosts efficiency but still lags significantly behind SOTA models.</li>
+                                                <li>Architecture and compression are as crucial as token count, affecting performance variance.</li>
+                                                <li>Significant token reduction works while maintaining performance, but ultra-low counts cause sharp drops.</li>
+                                                <li>16–300 tokens per frame is the optimal efficiency-performance balance.</li>
+                                                <li>Larger models can partially offset compression's information loss.</li>
+                                                <li>AuroraCap's non-linear curve shows the need for domain-specific token optimization.</li>
+                                            </ol>
+                                        </p>
+                                    </div>
+                                    <img src="assets/img/figures/find_7.png" class="card-img-top" alt="Finding 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4"> <!-- Add margin bottom for spacing between rows -->
+                            <div class="col-md-6"> <!-- First card takes full width -->
+                                <div class="card h-100"> <!-- Use h-100 for potentially equal height cards in a row -->
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lecture understanding in models relies more on textual content in frames than on animations.</h5>
+                                        <p class="card-text">
+                                            Models significantly excel in physics and chemistry lectures, which contain more textual explanations, while mathematics lectures emphasizes formulas and dynamic visual proofs.
+                                        </p>
+                                    </div>
+                                    <img src="assets/img/figures/find_2.png" class="card-img-top" alt="Finding 2" style="width: 90%; margin: auto; display: block;">
+                                </div>
+                            </div>
+                            <div class="col-md-6"> 
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Larger LLMs enhance lecture understanding but with diminishing returns.</h5>
+                                        <p class="card-text">
+                                            As model size increases, Qwen2.5 exhibits continuous performance gains, while InternVL2.5 (Qwen2.5 as LLM) gains gradually diminish with increasing model size.
+                                        </p>
+                                    </div>
+                                    <img src="assets/img/figures/find_5.png" class="card-img-top" alt="Finding 5" style="width: 90%; margin: auto; display: block;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Lecture Cases -->
+            <section id="cases" class="py-5">
+                <div class="container">
+                    <h2 class="text-center py-5">Lecture Cases</h2>
+                    <div class="video-container carousel-enabled">
+                        <table style="width: 80%; margin: 0 auto;">
+                            <tr>
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/xgfYivQt-x0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_1">
+                                            <span>View lecture detailed caption of case #1</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_1" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" id="vh_logical_matching_score" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr> 
+                                                        <p>"MVPs: Wordless Animations of Five Classic Proofs without Words" presents an intricate journey through mathematical concepts using purely visual demonstrations. The video opens with a stark black background featuring the title and subtitle, accompanied by a subscribe button and thumbs-up icon, setting the stage for an engaging educational experience.</p>
+                                                        
+                                                        <p>The presentation begins with a foundational exploration of geometric series, displaying the mathematical expression \( \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots + \frac{1}{2^k} + \ldots \). This infinite series is beautifully illustrated through a square divided into colored sections, where the left half is colored in deep purple representing \( \frac{1}{2} \), while the remaining space is partitioned into increasingly smaller sections in teal and purple, labeled with fractions \( \frac{1}{4} \), \( \frac{1}{8} \), \( \frac{1}{16} \), and \( \frac{1}{32} \). The visual demonstrates how these fractions collectively sum to 1, with each subsequent fraction representing half of the previous one.</p>
+                                                        
+                                                        <p>The video then transitions to exploring the sum of the first n natural numbers, presenting the equation \( 1 + 2 + 3 + \ldots + n = \frac{n(n + 1)}{2} \). This concept is visualized through a triangular arrangement of light blue squares, forming a right triangle pattern where each row contains one more square than the row above it. The dimensions are carefully labeled with n, demonstrating the relationship between the height and base of the triangle.</p>
+                                                        
+                                                        <p>A particularly elegant proof involves the difference of squares formula, \( a^2 - b^2 = (a - b)(a + b) \). This is demonstrated through multiple visual representations, including a large purple square representing \( a^2 \) and a smaller square representing \( b^2 \), with the difference illustrated through L-shaped sections and rectangular divisions. The dimensions are clearly labeled with a and b, showing how the factored form relates to the geometric representation.</p>
+                                                        
+                                                        <p>The Pythagorean theorem receives special attention through a series of illustrations, including a light blue right triangle with sides labeled a, b, and c, accompanied by the classic equation \( c^2 = a^2 + b^2 \). This is further elaborated through a square grid divided into four sections, with colored squares in purple and light blue demonstrating the relationship between the areas of squares formed by the triangle's sides.</p>
+                                                        
+                                                        <p>The presentation also explores the sum of odd numbers through the equation \( 1 + 3 + 5 + ... + (2n - 3) + (2n - 1) = n^2 \), using a grid of green and light blue squares to demonstrate how odd numbers sum to perfect squares. Each step in the progression is carefully illustrated through staircase-like arrangements of colored squares.</p>
+                                                        
+                                                        <p>Throughout the video, minimalist black silhouettes of standing figures appear at key transitions, suggesting a lecture-style presentation. A simple light bulb illustration also appears, symbolizing moments of insight or understanding. The presentation concludes by attributing these proofs to various historical figures, including ancient Greeks, Chinese mathematicians, Nicomachus of Gerasa, and Warren Page.</p>
+                                                        
+                                                        <p>Each proof is meticulously constructed using a consistent color palette of purples, blues, and teals against a black background, ensuring maximum visibility and clarity. The visual elements are carefully labeled with appropriate mathematical notation, creating a seamless blend of geometric and algebraic representations that effectively communicate complex mathematical concepts without the need for words.</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/Y_w07A7chnk.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_2" style="border-radius: 4px; padding: 8px 12px;">
+                                            <span>View lecture detailed caption of case #2</span>
+                                            <span class="icon is-small" style="font-size: 0.8em;">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_2" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" id="vh_logical_matching_score" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr>
+                                                        <p>
+                                                            The educational video on osmosis and tonicity, produced by Ricochet Science, presents a comprehensive exploration of these fundamental biological processes through clear visual elements and detailed explanations. 
+                                                            The presentation opens with a bold black title against a white background, immediately followed by the distinctive Ricochet Science logo featuring a stylized laboratory flask with rising bubbles in black and teal, establishing its educational context.
+                                                        </p>
+                                                        <p>
+                                                            At its core, the video establishes that osmosis represents the diffusion of water across a semipermeable membrane, while tonicity refers to the relative solute concentration between two environments separated by such a membrane. 
+                                                            This foundational concept is illustrated through a detailed central diagram showing a semipermeable membrane dividing two distinct environments. 
+                                                            The left side, labeled "Hypotonic Environment," contains a solution of 25% sodium chloride and 75% water, while the right side, labeled "Hypertonic Environment," shows 75% sodium chloride and 25% water. 
+                                                            The diagram uses color-coded spheres - blue for water molecules, purple for sodium ions (Na⁺), and orange for chloride ions (Cl⁻) - to clearly demonstrate molecular composition. 
+                                                            Yellow arrows indicate the fundamental principle that water molecules move from the hypotonic to the hypertonic environment, always flowing toward areas of higher solute concentration.
+                                                        </p>
+                                                        <p>
+                                                            The presentation then explores three critical scenarios using beakers containing red blood cells in different solutions. 
+                                                            In the first scenario, red blood cells are suspended in pure water (a hypotonic solution). 
+                                                            The video explains that the cells' internal environment is hypertonic relative to the surrounding water, causing water to flow into the cells through osmosis. 
+                                                            This influx of water can potentially lead to cell lysis, or bursting, if sufficient water enters the cells. 
+                                                            The second scenario demonstrates the opposite condition, where red blood cells are placed in a hypertonic sodium chloride solution (represented by blue liquid). 
+                                                            This environment causes crenation, or cell shrinkage, as water moves out of the cells toward the more concentrated external solution. 
+                                                            The third scenario illustrates isotonic conditions, where the solution's tonicity matches that of the cells, resulting in no net water movement and maintaining cellular stability.
+                                                        </p>
+                                                        <p>
+                                                            Throughout the presentation, these concepts are reinforced against a gradient purple background that enhances visibility and comprehension. 
+                                                            The semipermeable membrane is consistently depicted as a selective barrier, allowing water passage while restricting other substances. 
+                                                            This selective permeability is crucial for understanding cellular homeostasis and various physiological processes, including kidney function and the effects of diseases like diabetes, which the video briefly mentions as practical applications of these principles.
+                                                        </p>
+                                                        <p>
+                                                            The comprehensive visual journey concludes with the Ricochet Science logo and copyright information from Ricochet Creative Productions, LLC (2013), maintaining its professional educational approach throughout. 
+                                                            The presentation effectively combines theoretical concepts with practical examples, helping viewers understand how osmosis and tonicity influence cellular behavior in various environmental conditions, making complex biological processes accessible to learners at different levels.
+                                                        </p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/6H6nCpGW1nU.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_2">
+                                            <span>View lecture detailed caption of case #3</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_2" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" id="vh_logical_matching_score" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr>
+                                                        <p>"MVPs: Wordless Animations of Five Classic Proofs without Words" presents an intricate journey through mathematical concepts using purely visual demonstrations. The video opens with a stark black background featuring the title and subtitle, accompanied by a subscribe button and thumbs-up icon, setting the stage for an engaging educational experience.</p>
+                                                        
+                                                        <p>The presentation begins with a foundational exploration of geometric series, displaying the mathematical expression \( \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots + \frac{1}{2^k} + \ldots \). This infinite series is beautifully illustrated through a square divided into colored sections, where the left half is colored in deep purple representing \( \frac{1}{2} \), while the remaining space is partitioned into increasingly smaller sections in teal and purple, labeled with fractions \( \frac{1}{4} \), \( \frac{1}{8} \), \( \frac{1}{16} \), and \( \frac{1}{32} \). The visual demonstrates how these fractions collectively sum to 1, with each subsequent fraction representing half of the previous one.</p>
+                                                        
+                                                        <p>The video then transitions to exploring the sum of the first n natural numbers, presenting the equation \( 1 + 2 + 3 + \ldots + n = \frac{n(n + 1)}{2} \). This concept is visualized through a triangular arrangement of light blue squares, forming a right triangle pattern where each row contains one more square than the row above it. The dimensions are carefully labeled with n, demonstrating the relationship between the height and base of the triangle.</p>
+                                                        
+                                                        <p>A particularly elegant proof involves the difference of squares formula, \( a^2 - b^2 = (a - b)(a + b) \). This is demonstrated through multiple visual representations, including a large purple square representing \( a^2 \) and a smaller square representing \( b^2 \), with the difference illustrated through L-shaped sections and rectangular divisions. The dimensions are clearly labeled with a and b, showing how the factored form relates to the geometric representation.</p>
+                                                        
+                                                        <p>The Pythagorean theorem receives special attention through a series of illustrations, including a light blue right triangle with sides labeled a, b, and c, accompanied by the classic equation \( c^2 = a^2 + b^2 \). This is further elaborated through a square grid divided into four sections, with colored squares in purple and light blue demonstrating the relationship between the areas of squares formed by the triangle's sides.</p>
+                                                        
+                                                        <p>The presentation also explores the sum of odd numbers through the equation \( 1 + 3 + 5 + ... + (2n - 3) + (2n - 1) = n^2 \), using a grid of green and light blue squares to demonstrate how odd numbers sum to perfect squares. Each step in the progression is carefully illustrated through staircase-like arrangements of colored squares.</p>
+                                                        
+                                                        <p>Throughout the video, minimalist black silhouettes of standing figures appear at key transitions, suggesting a lecture-style presentation. A simple light bulb illustration also appears, symbolizing moments of insight or understanding. The presentation concludes by attributing these proofs to various historical figures, including ancient Greeks, Chinese mathematicians, Nicomachus of Gerasa, and Warren Page.</p>
+                                                        
+                                                        <p>Each proof is meticulously constructed using a consistent color palette of purples, blues, and teals against a black background, ensuring maximum visibility and clarity. The visual elements are carefully labeled with appropriate mathematical notation, creating a seamless blend of geometric and algebraic representations that effectively communicate complex mathematical concepts without the need for words.</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/JQNtR8lqcHA.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_2">
+                                            <span>View lecture detailed caption of case #4</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_2" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" id="vh_logical_matching_score" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr>
+                                                        <p>The video presents a sophisticated mathematical exploration of the expression √101 - √99, demonstrating an elegant approach to approximating the difference between two closely spaced square roots. Against a clean white background, a friendly cartoon character wearing glasses and a graduation cap serves as a mathematical guide, establishing the video's educational tone from the outset.</p>
+
+                                                        <p>The presentation begins with a crucial insight into the rationalization process, emphasizing that this technique is essential for such expressions involving the difference of square roots. The video methodically demonstrates the rationalization by multiplying both numerator and denominator by (√101 + √99), a strategic step that transforms the expression into (√101 - √99)(√101 + √99) / (√101 + √99). This manipulation leverages the fundamental difference of squares formula, (a + b)(a - b) = a² - b², which appears highlighted in red to underscore its pivotal role. The numerator elegantly simplifies to 101 - 99 = 2, yielding the more manageable form 2/(√101 + √99).</p>
+
+                                                        <p>The exploration then delves into a sophisticated analysis of bounds and properties. The video introduces the variable x to represent √101 + √99, and through careful algebraic manipulation, demonstrates that x² = 200 + 2√(100² - 1). This leads to a critical insight: since 100² - 1 represents numbers very close to 100², the expression can be bounded between 398 and 400. Through rigorous mathematical reasoning, the video establishes that x must lie between 19 and 20, as x² < 400 (20² = 400) and x² > 361 (19² = 361).</p>
+
+                                                        <p>The presentation further enriches understanding by showing how (√101 + √99)² expands to 101 + 99 + 2√(101 × 99), demonstrating the interconnection between different algebraic forms. This expansion provides additional verification of the bounds previously established. The analysis culminates in proving that 2/x falls within the precise range of 0.1 < 2/x < 0.105, leading to the approximate value of √101 - √99 ≈ 0.1025.</p>
+
+                                                        <p>Throughout the demonstration, visual aids enhance comprehension, with red arrows and color-coded inequalities guiding viewers through the mathematical relationships. A playful gray cat makes an endearing appearance, raising its paw in a friendly gesture, providing a moment of levity amidst the technical content. The video maintains its engaging approach while systematically building upon each concept, ensuring viewers grasp both the mathematical mechanics and the underlying reasoning.</p>
+
+                                                        <p>The presentation concludes with a visually appealing closing frame, featuring a red "SUBSCRIBE" button in the top left corner alongside a notification bell icon. The word "thank you" appears in artistic purple and red lettering, incorporating a heart symbol, while a cartoonish blue hand makes an appreciative gesture against the white background. This thoughtful conclusion maintains the video's welcoming tone while reinforcing its educational value.</p>
+
+                                                        <p>The entire presentation successfully combines rigorous mathematical analysis with accessible visual elements, making complex algebraic concepts more approachable while maintaining mathematical precision throughout the step-by-step exploration of transforming and bounding the expression √101 - √99.</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/DyKU__ivYm0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_2">
+                                            <span>View lecture detailed caption of case #5</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_2" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" id="vh_logical_matching_score" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr>
+                                                        <p>In this detailed mathematical video presentation, we observe a young man seated in front of a light-colored wall with windows, wearing a distinctive plaid shirt and baseball cap throughout. He engages enthusiastically with his audience while explaining an intricate geometric problem involving three circles and their relationships within a rectangular boundary. His recent haircut, which he playfully mentions at the end, adds a personal touch to his professional demeanor.</p>
+
+                                                        <p>The main problem, prominently displayed with the heading "Can you solve it?" and accompanied by a star icon, features three circles with diameters labeled as 3, 4, and 6 units. These circles are arranged within a rectangular framework, with the largest circle (diameter 6) determining the height of the rectangle. The problem's elegant setup demonstrates how these circles are tangent to each other and the rectangle's boundaries, creating an interesting geometric relationship that requires careful analysis to solve.</p>
+
+                                                        <p>The instructor methodically develops the solution by first breaking down the unknown distance into two components, labeled as x and y. This decomposition proves crucial for solving the problem, as it allows for the application of the Pythagorean theorem to two separate right triangles. The circles' radii (1.5, 2, and 3 units respectively) play a fundamental role in establishing these relationships.</p>
+
+                                                        <p>Throughout the video, the instructor develops the solution using several complementary diagrams. One diagram shows the circles with additional markings, including a fraction (2/6) and various dimensions labeled as 1.5, 3, 5, and 2. The problem is further elaborated using color-coding, with purple and green sections highlighting different parts of the solution path. Blue dashed lines indicate radii and measurements between key points, helping viewers follow the geometric reasoning.</p>
+
+                                                        <p>The solution process involves multiple geometric and algebraic steps, beginning with the analysis of the two larger circles. A right triangle is introduced with sides labeled 1 and 5, leading to the Pythagorean theorem equation: 1² + y² = 5². This is followed by the simplification 1 + y² = 25, ultimately yielding y = 2√6. Another key calculation involves a right triangle with sides of 2.5 and 3.5 units, utilized to determine the value of x through the equation 2.5² + x² = 3.5², which leads to x = √6.</p>
+
+                                                        <p>As the solution progresses, various measurements are revealed and analyzed, including segments marked as √6 and 2√6. The instructor carefully explains the relationships between these measurements, using vertical and horizontal lines to demonstrate connections. Green lines are employed to highlight specific measurements, particularly when dealing with the length marked as 5 units and the variable y.</p>
+
+                                                        <p>The mathematical working shows particular attention to detail in handling square roots and simplification. The process of simplifying √24 into 2√6 is clearly explained, demonstrating important algebraic techniques. The final solution elegantly combines the two components (x + y) to arrive at 3√6, which represents the total distance in question.</p>
+
+                                                        <p>The video culminates with the complete solution, showing how all the geometric relationships and measurements come together. The final diagrams display both the initial problem setup and the solved configuration, with all relevant measurements clearly labeled, including the conclusive proof that the unknown length equals 3√6. The instructor's animated and friendly demeanor helps maintain viewer engagement throughout this complex mathematical journey, all while staying in his consistent position in front of the light-colored wall with windows visible in the background. His step-by-step approach, combined with clear visual aids and enthusiastic presentation style, makes this challenging geometric problem accessible and engaging for viewers.</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/rbJlTAO_Oms.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_2">
+                                            <span>View lecture detailed caption of case #6</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_2" class="collapse-content" style="background-color: #ffffff; opacity: 1; z-index: 1000; position: relative; border: 1px solid #dee2e6; border-radius: 0 0 8px 8px; padding: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                            <table class="table is-striped is-hoverable" id="vh_logical_matching_score" style="width: 100%; table-layout: fixed; font-size: 0.9em; background-color: #ffffff;">
+                                                <thead>
+                                                    <tr>
+                                                        <p style="margin: 0 0 10px 0; line-height: 1.5; color: #333;">"THIS IS MF DOOM" presents an intricate mathematical exploration set against a stark black background, where complex mathematical concepts are woven together with cultural references to the legendary rapper and producer MF DOOM. Throughout the presentation, a bold title consistently anchors each frame, serving as a reminder of the unique intersection between mathematics and musical artistry.</p>
+                                        
+                                                        <p style="margin: 0 0 10px 0; line-height: 1.5; color: #333;">The video begins by introducing a fundamental mathematical series, presenting the expression (1 - p) + p(1 - p) + p²(1 - p) + p³(1 - p) + ..., which equals 1. This foundational series emerges from a recursive process of repeatedly dividing the rightmost piece into fixed proportions, demonstrating how mathematical patterns can arise from simple iterative procedures. The related geometric series 1 + p + p² + p³ + ... simplifies to 1/(1 - p), a crucial result that underlies much of the subsequent analysis. The presentation carefully explains that this series "makes sense for almost any value of p," though the initial derivation only applies for values between 0 and 1.</p>
+                                        
+                                                        <p style="margin: 0 0 10px 0; line-height: 1.5; color: #333;">A significant portion of the video focuses on a probability distribution displayed on a number line ranging from 0 to 1. The line features crucial expressions involving the variable p and its complement (1 - p), with specific attention paid to terms like (1 - p), p(1 - p), p²(1 - p), p³(1 - p), and p⁴. Arrows strategically point to these expressions, emphasizing their relationships and significance within the probability framework. This visual representation helps illustrate how the series components distribute across the unit interval.</p>
+                                        
+                                                        <p style="margin: 0 0 10px 0; line-height: 1.5; color: #333;">The presentation then delves into alternating series, examining the behavior of (-1)⁰ + (-1)¹ + (-1)² + (-1)³ + ..., which equals 1/(1 - (-1)). This leads to the fascinating result that the alternating series 1 - 1 + 1 - 1 + ... equals ½, a result that, while seemingly counterintuitive, emerges naturally from the established framework. Further mathematical exploration introduces the geometric series 2⁰ + 2¹ + 2² + 2³ + ..., which equals 1/(1-2), demonstrating how 1 + 2 + 4 + 8 + ... surprisingly equals -1. These results showcase how mathematical formalism can lead to unexpected yet consistent conclusions when extended beyond their original context.</p>
+                                        
+                                                        <p style="margin: 0 0 10px 0; line-height: 1.5; color: #333;">The video maintains its mathematical rigor while illustrating these concepts through various representations. Each frame builds upon the previous, creating a cohesive narrative that connects probability theory, infinite series, and geometric progressions. The representation of these concepts includes both algebraic expressions and visual elements on the number line, making complex mathematical ideas more accessible.</p>
+                                        
+                                                        <p style="margin: 0 0 10px 0; line-height: 1.5; color: #333;">Throughout the presentation, special attention is paid to the variable p and its various powers and combinations with (1 - p), suggesting a deeper connection between probability theory and the artistic themes associated with MF DOOM. The consistent use of the black background with white text creates a stark contrast that emphasizes the mathematical notation while maintaining a stylistic connection to the artist's aesthetic.</p>
+                                        
+                                                        <p style="margin: 0 0 10px 0; line-height: 1.5; color: #333;">The video concludes by reinforcing these mathematical relationships, particularly focusing on the probability distribution and infinite series concepts. The final frames reiterate the key expressions and their relationships, ensuring viewers grasp both the individual components and their interconnections within the larger mathematical framework, all while maintaining the thematic connection to MF DOOM's artistic legacy. The presentation demonstrates how mathematical formulas can transcend their original derivation contexts to reveal broader patterns and relationships in unexpected domains.</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="video-container carousel-enabled-alt">
+                        <table style="width: 80%; margin: 0 auto;">
+                            <tr>
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/xgfYivQt-x0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_alt_1">
+                                            <span>View lecture question-answering of case #1</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_alt_1" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr> 
+                                                        <p>Q: What is the physical significance of the radiating arrows shown around bodies?</p>
+                                                        <p>A: They illustrate that all objects with temperature emit electromagnetic radiation into space</p>
+                                                        <p>Q: How does the video demonstrate the practical application of the Stefan-Boltzmann Law?</p>
+                                                        <p>A: Through calculating the Sun's surface temperature using its power output and radius</p>
+                                                        <p>Q: Why is the Stefan-Boltzmann constant important in thermal radiation physics?</p>
+                                                        <p>A: It provides the proportionality factor between power output and temperature for radiating bodies</p>
+                                                        <p>Q: How does the Earth-Sun diagram illustrate radiative interactions?</p>
+                                                        <p>A: Through red arrows showing the exchange of thermal radiation between the two celestial bodies</p>
+                                                        <p>Q: What is the significance of the T⁴ relationship in the Stefan-Boltzmann Law?</p>
+                                                        <p>A: It shows that power output increases dramatically with temperature, explaining why hot objects radiate much more energy</p>
+                                                        <p>Q: How does the video explain the concept of thermal equilibrium?</p>
+                                                        <p>A: By showing that objects both emit and absorb radiation, reaching a balance at a specific temperature</p>
+                                                        <p>Q: Why is the Stefan-Boltzmann Law considered a fundamental principle in astrophysics?</p>
+                                                        <p>A: Because it allows scientists to determine stellar temperatures from observed radiation, a key parameter in understanding stellar evolution</p>
+                                                        <p>Q: How does the animation illustrate the concept of blackbody radiation?</p>
+                                                        <p>A: Through the visualization of perfect absorbers and emitters of radiation across all wavelengths</p>
+                                                        <p>Q: What is the relationship between the Stefan-Boltzmann Law and Wien's Displacement Law?</p>
+                                                        <p>A: While Stefan-Boltzmann describes total power output, Wien's Law complements it by describing how the peak wavelength of emission varies with temperature</p>
+                                                        <p>Q: How does the video connect microscopic atomic behavior to macroscopic radiation?</p>
+                                                        <p>A: By explaining that thermal radiation results from the acceleration of charged particles within atoms and molecules</p>
+                                                        <p>Q: What role does surface area play in the Stefan-Boltzmann equation?</p>
+                                                        <p>A: It's directly proportional to power output, explaining why larger objects of the same temperature emit more total radiation</p>
+                                                        <p>Q: How does the video explain the difference between thermal radiation and other forms of heat transfer?</p>
+                                                        <p>A: By emphasizing that thermal radiation requires no medium and can travel through vacuum, unlike conduction and convection</p>
+                                                        <p>Q: What is the significance of the emissivity factor in real-world applications?</p>
+                                                        <p>A: It accounts for the fact that real objects aren't perfect emitters, allowing for accurate calculations with different materials</p>
+                                                        <p>Q: How does the Stefan-Boltzmann Law relate to the concept of energy conservation?</p>
+                                                        <p>A: It quantifies the energy balance between absorption and emission that maintains thermal equilibrium</p>
+                                                        <p>Q: What practical applications of the Stefan-Boltzmann Law are mentioned?</p>
+                                                        <p>A: Thermal imaging, temperature measurement of distant objects, and understanding climate and planetary energy balance</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/6KPSmajeseI.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_alt_2">
+                                            <span>View lecture question-answering of case #2</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_alt_2" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr>
+                                                        <p>Q: Why is the relationship xyz = r²s significant?</p>
+                                                        <p>A: It reveals a fundamental connection between the triangle's dimensions and its inscribed circle</p>
+                                                        <p>Q: How does the dual representation of semi-perimeter contribute to understanding triangle properties?</p>
+                                                        <p>A: It bridges the connection between external measurements (sides) and internal structure (tangency points)</p>
+                                                        <p>Q: What is the significance of the scaling transformations in the demonstration?</p>
+                                                        <p>A: They show how geometric properties transform while maintaining proportional integrity under different scaling factors</p>
+                                                        <p>Q: How does the progression from Δ = rs to Δ² = s(s-a)(s-b)(s-c) demonstrate mathematical development?</p>
+                                                        <p>A: It shows the evolution from a basic area formula to a more sophisticated expression using only side lengths</p>
+                                                        <p>Q: Why is the grid structure maintained throughout the presentation?</p>
+                                                        <p>A: To provide a reliable reference frame for understanding geometric relationships and ensuring accurate construction</p>
+                                                        <p>Q: How do the points of tangency contribute to understanding triangle properties?</p>
+                                                        <p>A: They establish critical relationships between the triangle's sides and its inscribed circle</p>
+                                                        <p>Q: What is the mathematical significance of using x, y, and z segments?</p>
+                                                        <p>A: They represent crucial distances that connect vertices to tangency points and help establish relationships with the incircle</p>
+                                                        <p>Q: How does the rectangular configuration enhance understanding of the geometric principles?</p>
+                                                        <p>A: It illuminates interconnections between various dimensional components through auxiliary segments and diagonal elements</p>
+                                                        <p>Q: Why are multiple expressions for the triangle area presented?</p>
+                                                        <p>A: Each expression offers unique insights into the triangle's properties and relationships</p>
+                                                        <p>Q: How does the integration of formal expressions with geometric representations enhance understanding?</p>
+                                                        <p>A: It ensures complete comprehension of both visual and analytical aspects of the mathematical relationships</p>
+                                                        <p>Q: What role do the zigzag patterns and polygonal formations play?</p>
+                                                        <p>A: They serve to demonstrate specific geometric principles and relationships</p>
+                                                        <p>Q: Why is the concept of semi-perimeter central to this geometric exploration?</p>
+                                                        <p>A: It connects multiple aspects of the triangle including its sides, area, and inscribed circle properties</p>
+                                                        <p>Q: How do the scaling operations relate to the original triangle?</p>
+                                                        <p>A: They maintain proportional relationships while demonstrating how properties transform under different scaling factors</p>
+                                                        <p>Q: What is the significance of connecting the incircle radius to other triangle measurements?</p>
+                                                        <p>A: It establishes fundamental relationships between the triangle's internal and external dimensions</p>
+                                                        <p>Q: How does the systematic progression of concepts support mathematical understanding?</p>
+                                                        <p>A: It builds a thorough examination of triangle geometry by gradually revealing relationships between different elements</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/K7SWwsvE5YE.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_alt_3">
+                                            <span>View lecture question-answering of case #3</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_alt_3" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr>
+                                                        <p>Q: Why is decomposing 36 into 3³ + 3² useful in solving the equation?</p>
+                                                        <p>A: It hints at a structured approach to rewriting the equation in a form that facilitates factorization.</p>
+                                                        <p>Q: How does the video transition from real numbers to complex numbers?</p>
+                                                        <p>A: By solving the quadratic equation x² - 4x + 12 = 0 and finding a negative discriminant, leading to imaginary solutions.</p>
+                                                        <p>Q: Why is factorization a key technique in solving x² - x³ = 36?</p>
+                                                        <p>A: It simplifies the equation into a product of expressions, allowing direct identification of solutions.</p>
+                                                        <p>Q: What role does the quadratic formula play in the solution?</p>
+                                                        <p>A: It is used to find the non-integer solutions after factorization, involving complex numbers.</p>
+                                                        <p>Q: How does the video visually represent complex numbers?</p>
+                                                        <p>A: By introducing i = √-1 and demonstrating its effect in the quadratic equation's solution.</p>
+                                                        <p>Q: Why is the detective-like animated character included in the video?</p>
+                                                        <p>A: To symbolize logical reasoning and investigation in solving complex mathematical problems.</p>
+                                                        <p>Q: How does rewriting x² - x³ = 36 as x³ + 3x² - 4x² + 36 = 0 help?</p>
+                                                        <p>A: It provides an intermediate step that facilitates factorization and solution derivation.</p>
+                                                        <p>Q: What deeper mathematical principle does this problem illustrate?</p>
+                                                        <p>A: The interplay between polynomial factorization, the quadratic formula, and the introduction of complex numbers.</p>
+                                                        <p>Q: Why is the quadratic equation x² - 4x + 12 = 0 guaranteed to have complex solutions?</p>
+                                                        <p>A: Because its discriminant (b² - 4ac) is negative, indicating non-real roots.</p>
+                                                        <p>Q: What insight does the equation's transformation provide into cubic equations?</p>
+                                                        <p>A: That factoring techniques can simplify higher-degree equations into solvable quadratics.</p>
+                                                        <p>Q: How could this problem be extended to more advanced algebraic topics?</p>
+                                                        <p>A: By exploring polynomial division, synthetic division, or graphing cubic functions.</p>
+                                                        <p>Q: What lesson does this problem teach about strategic problem-solving?</p>
+                                                        <p>A: That recognizing patterns (like 3³ + 3²) can simplify seemingly complex equations.</p>
+                                                        <p>Q: How does this equation relate to broader Olympiad-style mathematical challenges?</p>
+                                                        <p>A: It demonstrates the need for creative approaches, algebraic manipulation, and advanced number theory concepts.</p>
+                                                        <p>Q: What alternative solution methods could be applied to this problem?</p>
+                                                        <p>A: Graphical analysis of the function, numerical approximation, or alternative factorization techniques.</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                    <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                        <source src="assets/vid/cases/Pjqb2s5_YWA.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <div class="collapsible-section">
+                                        <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_alt_4">
+                                            <span>View lecture question-answering of case #4</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <div id="transition_table_vh_alt_4" class="collapse-content">
+                                            <table class="table is-striped is-hoverable" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                                <thead>
+                                                    <tr>
+                                                        <p>Q: Why is logarithmic differentiation particularly useful for this type of function?</p>
+                                                        <p>A: It is especially valuable when dealing with expressions involving products, quotients, and roots that would be cumbersome to differentiate directly</p>
+                                                        <p>Q: How does the method convert root expressions into more manageable terms?</p>
+                                                        <p>A: By using fractional exponents and the quotient rule of logarithms</p>
+                                                        <p>Q: What key principle must students remember about y during the differentiation process?</p>
+                                                        <p>A: That y represents the original function throughout the process</p>
+                                                        <p>Q: Why is taking the natural logarithm of both sides the first step?</p>
+                                                        <p>A: To convert multiplication and division into addition and subtraction through logarithm properties
+                                                        <p>Q: How does logarithmic differentiation simplify the handling of products and quotients?
+                                                        <p>A: It converts products into sums and quotients into differences through logarithm properties</p>
+                                                        <p>Q: What mathematical rules are combined in this technique?</p>
+                                                        <p>A: Chain rule, logarithm properties, and fundamental derivative rules</p>
+                                                        <p>Q: Why is ½ used in the logarithmic expression?</p>
+                                                        <p>A: It comes from converting the square root into a fractional exponent of ½</p>
+                                                        <p>Q: How does the technique handle the denominator of the original fraction?</p>
+                                                        <p>A: By converting it to negative terms in the logarithmic expression</p>
+                                                        <p>Q: What advantage does this method offer over direct differentiation?</p>
+                                                        <p>A: It simplifies complex expressions involving products, quotients, and roots into more manageable additive terms</p>
+                                                        <p>Q: Why is it important to maintain y in the final expression?</p>
+                                                        <p>A: Because it represents the original function and is needed for the complete derivative expression</p>
+                                                        <p>Q: How does the method handle the square root in the original expression?</p>
+                                                        <p>A: By converting it to a power of ½ when taking the natural logarithm</p>
+                                                        <p>Q: What role does the chain rule play in this technique?</p>
+                                                        <p>A: It's used when differentiating the logarithmic terms with respect to x</p>
+                                                        <p>Q: Why are the terms separated with ½ coefficients?</p>
+                                                        <p>A: Due to the square root being converted to ½ power and the properties of logarithms</p>
+                                                        <p>Q: How does this technique demonstrate the relationship between exponentials and logarithms?</p>
+                                                        <p>A: It shows how logarithms can convert complex multiplicative relationships into simpler additive ones</p>
+                                                        <p>Q: What mathematical principle allows the separation of the fraction under the square root?</p>
+                                                        <p>A: The properties of logarithms that allow separation of products and quotients</p>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                    <source src="assets/vid/cases/YQRTwlRMsXY.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> 
+                                <div class="collapsible-section">
+                                    <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_alt_5">
+                                        <span>View lecture question-answering of case #5</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                    <div id="transition_table_vh_alt_5" class="collapse-content">
+                                        <table class="table is-striped is-hoverable" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                            <thead>
+                                                <tr>
+                                                    <p>Q: Why is Avogadro's number important in mole conversions?</p>
+                                                    <p>A: Avogadro's number (6.02 × 10²³) represents the number of atoms or molecules in one mole, serving as a key conversion factor for counting particles at the atomic scale.</p>
+                                                    <p>Q: How does the flowchart help students understand mole conversion?</p>
+                                                    <p>A: It visually illustrates the relationships between atoms, molecules, moles, and grams, helping students grasp the logical steps in the conversion process.</p>
+                                                    <p>Q: Why is it necessary to highlight Aluminum's atomic mass in the video?</p>
+                                                    <p>A: The atomic mass (26.98 g/mol) is essential for converting between grams and moles using the mole conversion formula.</p>
+                                                    <p>Q: Why is the formula (4.904 g Al / 1) × (1 mol / 26.98 g) valid for this conversion?</p>
+                                                    <p>A: Because it follows dimensional analysis, ensuring that grams cancel out, leaving the answer in moles.</p>
+                                                    <p>Q: How would the conversion formula change if we were calculating moles for a different element?</p>
+                                                    <p>A: The atomic mass in the denominator would change to reflect the molar mass of the different element.</p>
+                                                    <p>Q: If you had 10 g of Aluminum instead of 4.904 g, how many moles would that be?</p>
+                                                    <p>A: (10 g Al / 1) × (1 mol / 26.98 g) = 0.3707 moles of Aluminum.</p>
+                                                    <p>Q: What would happen if you mistakenly used the atomic number instead of the atomic mass in the conversion formula?</p>
+                                                    <p>A: The calculation would be incorrect because atomic number represents the number of protons, not the mass required for mole conversion.</p>
+                                                    <p>Q: Why does the video emphasize keeping a clean and uncluttered layout for problem-solving?</p>
+                                                    <p>A: A clear layout helps students follow the logical steps more easily and reduces confusion during calculations.</p>
+                                                    <p>Q: How does emphasizing unit relationships in the video benefit students?</p>
+                                                    <p>A: It ensures that students understand how different units interact, reinforcing their ability to apply conversions in various chemistry problems.</p>
+                                                    <p>Q: What concept is indirectly reinforced by showing that 1 mole of Aluminum weighs 26.98 grams?</p>
+                                                    <p>A: The idea that molar mass acts as a bridge between microscopic atomic-scale quantities and measurable macroscopic quantities.</p>
+                                                    <p>Q: How would you explain the conversion process to someone with no background in chemistry?</p>
+                                                    <p>A: Start by explaining that atoms are too small to count individually, so we use moles to represent large numbers of them, and we convert grams to moles using atomic mass.</p>
+                                                    <p>Q: What other chemistry topics are closely related to mole conversion?</p>
+                                                    <p>A: Stoichiometry, chemical reactions, limiting reagents, and solution concentrations all rely on mole conversions.</p>
+                                                    <p>Q: If the video were extended, what additional concepts could be introduced to deepen the understanding of moles?</p>
+                                                    <p>A: It could cover molar ratios in chemical reactions, Avogadro's law in gases, or real-world applications like pharmaceutical dosages.</p>
+                                                    <p>Q: What common mistakes might students make when performing mole conversions?</p>
+                                                    <p>A: Mistakes include using atomic number instead of atomic mass, incorrect unit cancellation, or misplacing conversion factors in the equation.</p>
+                                                    <p>Q: Why is mole conversion a foundational skill in chemistry?</p>
+                                                    <p>A: Because it allows chemists to relate atomic-scale interactions to measurable quantities, enabling accurate chemical reactions, laboratory experiments, and industrial applications.</p>
+
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                </td>
+
+                                <td style="width: 50%; padding: 10px;">
+                                <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                                    <source src="assets/vid/cases/nQBC00jIiHE.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> 
+                                <div class="collapsible-section">
+                                    <button class="button is-fullwidth toggle-section" aria-controls="transition_table_vh_alt_6">
+                                        <span>View lecture question-answering of case #6</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                    <div id="transition_table_vh_alt_6" class="collapse-content">
+                                        <table class="table is-striped is-hoverable" style="width: 100%; table-layout: fixed; font-size: 0.9em;">
+                                            <thead>
+                                                <tr>
+                                                    <p>Q: Why is the fluoride ion concentration exactly double the calcium ion concentration?</p>
+                                                    <p>A: Due to the 1:2 stoichiometric ratio in the balanced equation of CaF₂ dissolution</p>
+                                                    <p>Q: Why is the fluoride concentration squared in the Ksp expression?</p>
+                                                    <p>A: Because the stoichiometric coefficient of fluoride in the balanced equation is 2</p>
+                                                    <p>Q: How does the video connect theoretical concepts with practical application?</p>
+                                                    <p>A: Through solving a real fluorite dissolution problem while explaining the underlying equilibrium principles</p>
+                                                    <p>Q: What is the significance of using a saturated solution in this problem?
+                                                    <p>A: It ensures equilibrium conditions necessary for calculating Ksp</p>
+                                                    <p>Q: How does the dissociation equation of CaF₂ demonstrate stoichiometry?</p>
+                                                    <p>A: It shows that one CaF₂ molecule dissociates into one Ca²⁺ and two F⁻ ions</p>
+                                                    <p>Q: What relationship exists between the balanced equation and the Ksp formula?</p>
+                                                    <p>A: The stoichiometric coefficients in the balanced equation determine the exponents in the Ksp expression</p>
+                                                    <p>Q: Why is it important to understand the stoichiometric relationship in this problem?</p>
+                                                    <p>A: It determines the relative concentrations of ions and affects how the Ksp is calculated</p>
+                                                    <p>Q: How does the video's visual design support learning?</p>
+                                                    <p>A: Through color-coded text, clear visual presentation, and alternating between animated and live segments</p>
+                                                    <p>Q: What role does the solubility product constant play in understanding dissolution?</p>
+                                                    <p>A: It quantifies the extent of dissociation at equilibrium in saturated solutions</p>
+                                                    <p>Q: How does Professor Dave's presentation style contribute to learning?</p>
+                                                    <p>A: Through his engaging demeanor, clear explanations, and combination of theoretical and practical content</p>
+                                                    <p>Q: What is the relationship between solubility equilibrium and ion concentrations?</p>
+                                                    <p>A: The ion concentrations at equilibrium determine the solubility product constant value</p>
+                                                    <p>Q: Why is it important to specify that CaF₂ is in solid state in the equation?</p>
+                                                    <p>A: To indicate it's a heterogeneous equilibrium where the solid phase concentration isn't included in Ksp</p>
+                                                    <p>Q: How does the video's structure support concept building?</p>
+                                                    <p>A: By progressing from basic equilibrium concepts to practical calculation application</p>
+                                                    <p>Q: What mathematical reasoning is used to determine ion concentrations?</p>
+                                                    <p>A: Using stoichiometric ratios to relate calcium and fluoride ion concentrations in the solution</p>
+                                                    <p>Q: How does the video maintain viewer engagement?</p>
+                                                    <p>A: Through interactive elements, clear visual presentation, and combining theoretical concepts with practical problem-solving</p>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <!-- huggingface dataset -->
+            <section id="huggingface" class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center py-5">Benchmark Construction</h2>
+                    <p>
+                        Video-MMLU aims to rigorously evaluate the capabilities of Large Multimodal Models (LMMs) in perceiving and reasoning over real-world educational video. Unlike existing benchmarks, Video-MMLU focuses on videos filled with complex <strong>formulas, dynamic animations, and requiring multi-step reasoning</strong>.
+                    </p>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="table-container" style="overflow-x: auto;"> <!-- Added overflow for smaller screens -->
+                            <table class="data-table">
+                                <thead>
+                                    <!-- Main Header Row -->
+                                    <tr>
+                                        <th rowspan="2"><strong>Dataset</strong></th>
+                                        <th rowspan="2"><strong>Theme</strong></th>
+                                        <th rowspan="2"><strong># Video</strong></th>
+                                        <th rowspan="2"><strong># Ave. Duration (s)</strong></th>
+                                        <th colspan="4"><strong>Caption</strong></th>
+                                        <th colspan="2"><strong>Question-answering</strong></th>
+                                    </tr>
+                                    <!-- Sub-Header Row -->
+                                    <tr>
+                                        <th><strong>Number</strong></th>
+                                        <th><strong># Word</strong></th>
+                                        <th><strong># Vocab.</strong></th>
+                                        <th><strong>Ave. Length</strong></th>
+                                        <th><strong>Number</strong></th>
+                                        <th><strong>Type</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MovieChat-1K</td>
+                                        <td>Movie</td>
+                                        <td>1,000</td>
+                                        <td>564</td>
+                                        <td>1,000</td>
+                                        <td>121,077</td>
+                                        <td>102,988</td>
+                                        <td>121</td>
+                                        <td>13,000</td>
+                                        <td>OE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MMWorld</td>
+                                        <td>Professional</td>
+                                        <td>1,910</td>
+                                        <td>107</td>
+                                        <td>1,910</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>66</td>
+                                        <td>6,627</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MLVU</td>
+                                        <td>Open</td>
+                                        <td>1,730</td>
+                                        <td>930</td>
+                                        <td>247</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>3,102</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MVBench</td>
+                                        <td>Open</td>
+                                        <td>4,000</td>
+                                        <td>16</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>&times;</td> <!-- Red X -->
+                                        <td>-</td>
+                                        <td>4,000</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LongVideoBench</td>
+                                        <td>Open</td>
+                                        <td>3,763</td>
+                                        <td>473</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>&times;</td> <!-- Red X -->
+                                        <td>-</td>
+                                        <td>6,678</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TempCompass</td>
+                                        <td>Open</td>
+                                        <td>410</td>
+                                        <td>&lt; 30</td> <!-- Less than symbol -->
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>&times;</td> <!-- Red X -->
+                                        <td>-</td>
+                                        <td>7,540</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Video-MMMU</td>
+                                        <td>Professional</td>
+                                        <td>300</td>
+                                        <td>506</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>&times;</td> <!-- Red X -->
+                                        <td>-</td>
+                                        <td>900</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>VATEX</td>
+                                        <td>Open</td>
+                                        <td>41,250</td>
+                                        <td>10</td>
+                                        <td>41,250</td>
+                                        <td>4,994,768</td>
+                                        <td>44,103</td>
+                                        <td>15</td>
+                                        <td>-</td>
+                                        <td>&times;</td> <!-- Red X -->
+                                    </tr>
+                                    <tr>
+                                        <td>VDC</td>
+                                        <td>Open</td>
+                                        <td>1,027</td>
+                                        <td>28</td>
+                                        <td>1,027</td>
+                                        <td>515,441</td>
+                                        <td>20,419</td>
+                                        <td>501</td>
+                                        <td>-</td>
+                                        <td>&times;</td> <!-- Red X -->
+                                    </tr>
+                                    <tr>
+                                        <td>LongCaptioning</td>
+                                        <td>Open</td>
+                                        <td>10,000</td>
+                                        <td>93</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>1,198</td>
+                                        <td>-</td>
+                                        <td>&times;</td> <!-- Red X -->
+                                    </tr>
+                                    <!-- Highlighted Row for "Video-MMLU (ours)" -->
+                                    <tr class="highlight-row">
+                                        <td><strong>Video-MMLU (ours)</strong></td>
+                                        <td><strong>Professional</strong></td>
+                                        <td><strong>1,065</strong></td>
+                                        <td><strong>109</strong></td>
+                                        <td><strong>1,065</strong></td>
+                                        <td><strong>520,679</strong></td>
+                                        <td><strong>27,613</strong></td>
+                                        <td><strong>489</strong></td>
+                                        <td><strong>15,746</strong></td>
+                                        <td><strong>OE</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <figure style="text-align: center;">
+                        <figcaption style="text-align: left; width: 100%; align-self: stretch;">
+                            <strong>Table 1:</strong> Benchmark comparison for video understanding tasks. Ave. Length indicates the average number of words per caption. OE stands for Open-ended, and MC stands for Multiple-choice.
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Inspired by the scene of a <strong>classroom</strong>, Video-MMLU treats the model as a <i>student</i> tasked with learning from the video lectures, while the dataset acts as the <i>teacher</i>. This paradigm involves two primary evaluation tasks: the model "takes notes" through generating <strong>detailed captioning</strong> for the video content, and it "takes a quiz" by answering challenging questions that require <strong>visual reasoning question answering</strong> based on the lecture material.
+                    </p>
+                    <d-figure id="fig-vision_connector"></d-figure>
+                        <figure>
+                            <img data-zoomable="" draggable="false" src="assets/img/figures/b_2.png" alt="" style="width: 80%;display: block; margin: 0 auto;">
+                        </figure>
+                    </d-figure>
+                    <p>
+                        The construction of Video-MMLU involves collecting <strong>1,065 videos</strong> sourced from <strong>10 distinct educational YouTube channels</strong>. The collection heavily emphasizes <strong>Mathematics</strong>, complemented by <strong>Physics</strong> and <strong>Chemistry</strong>. Video <strong>durations</strong> were constrained to between 10 and 240 seconds, with a maximum cap at 4 minutes. Only videos with available English <strong>subtitles</strong> were included to provide a textual baseline. 
+                    </p>
+                    <div id="transition_table_vh_3" class="collapse-content">
+                        <iframe
+                            src="https://huggingface.co/datasets/Enxin/Video-MMLU/embed/viewer/default/Video_MMLU"
+                            frameborder="0"
+                            width="100%"
+                            height="560px"
+                            ></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="py-5">
+                <div class="container">
+                    <h2 class="text-center py-5">FAQs</h2>
+                    <div class="faq">
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq1">
+                                    What is Video-MMLU?
+                                </button>
+                            </div>
+                            <div id="faq1" class="collapse">
+                                <div class="card-body">
+                                    Video-MMLU is a benchmark designed to evaluate large multimodal models on their ability to understand and reason about real-world lecture videos across multiple domains and disciplines.
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq2">
+                                    How does Video-MMLU differ from other benchmarks?
+                                </button>
+                            </div>
+                            <div id="faq2" class="collapse">
+                                <div class="card-body">
+                                    Unlike text-only or image-only benchmarks, Video-MMLU specifically tests comprehension of educational video content, requiring models to integrate visual, auditory, and temporal information to answer challenging questions.
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq3">
+                                    How can I use the benchmark?
+                                </button>
+                            </div>
+                            <div id="faq3" class="collapse">
+                                <div class="card-body">
+                                    The benchmark dataset and evaluation code are available through our GitHub repository. Researchers can use it to test their models and compare results with existing baselines.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Previous work -->
+            <section id="related_work" class="py-3">
+                <div class="container">
+                    <h2 class="text-center py-3">Our Related Work</h2>
+                    <div class="faq">
+                        <div class="card">
+                            <div class="has-text-centered">
+                                <h5 style="font-weight: bold; margin: 3px 0; text-align: center;">
+                                    MovieChat: From Dense Token to Sparse Memory for Long Video Understanding
+                                </h5>
+                                <p style="color: hsl(271, 100%, 27%); font-weight: bold; text-align: center; margin: 3px 0;">The first long-form video open-ended benchmark.</p>
+                                <div class="'is-size-4 publication-authors" style="text-align: center;">
+                                    <span class="author-block" style="color: darkred; font-weight: bold;">CVPR 2024</span>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <a href="https://arxiv.org/abs/2307.16449v4" class="btn btn-primary mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">arXiv</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="https://github.com/rese1f/MovieChat" class="btn btn-light mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">GitHub</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="https://huggingface.co/datasets/Enxin/MovieChat-1K-test" class="btn btn-warning mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">Huggingface</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="has-text-centered">
+                                <h5 style="font-weight: bold; margin: 3px 0; text-align: center;">
+                                    AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark
+                                </h5>
+                                <p style="color: hsl(271, 100%, 27%); font-weight: bold; text-align: center; margin: 3px 0;">A more efficient multimodal large language model series.</p>
+                                <div class="'is-size-4 publication-authors" style="text-align: center;">
+                                    <span class="author-block" style="color: darkred; font-weight: bold;">ICLR 2025</span>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <a href="https://arxiv.org/abs/2410.03051" class="btn btn-primary mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">arXiv</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="https://rese1f.github.io/aurora-web/" class="btn btn-light mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">Website</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="https://huggingface.co/datasets/wchai/Video-Detailed-Caption" class="btn btn-warning mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" target="_blank">Huggingface</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            
+        </main>
+        
+        <!-- End of Main Content -->
+
+        <!-- BibTeX -->
+        <section id="bibtex" class="py-3 bg-light"> <!-- Reduced padding from py-5 to py-3 -->
+            <div class="container">
+                <!-- Removed the large centered h2 title -->
+                <p><strong>BibTeX</strong></p> <!-- Added a smaller, left-aligned label -->
+                <!-- Removed the card and card-body divs -->
+                <pre style="background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 1rem; border-radius: .25rem;"><code>@misc{song2024videommlu,
+                    title={Video-MMLU: A Massive Multi-discipline Lecture Understanding Benchmark}, 
+                    author={Enxin Song and Wenhao Chai and Weili Xu and Jianwen Xie and Yuxuan Liu and Gaoang Wang},
+                    year={2024},
+                    eprint={2407.04171},
+                    archivePrefix={arXiv},
+                    primaryClass={cs.CV}
+                }</code></pre>
+            </div>
+        </section>
+        <!-- End of BibTeX -->
+
+        <!-- Top Button -->
+        <a id="back-to-top" href="index.html" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        <!-- End of Top Button -->
+
+
+        <!-- Core Javascripts -->
+        <script src="assets/vendor/jquery/dist/jquery.min.js"></script> <!-- Bootstrap 5 doesn't strictly require jQuery, but your theme might -->
+        <script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/vendor/typed.js/lib/typed.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="assets/vendor/rellax/rellax.min.js"></script>
+        <script src="assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="assets/js/theme.js"></script>
+        <script src="assets/js/top.js"></script>
+
+        <!-- Bootstrap 5 JS Bundle (includes Popper.js) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <div id="popup-overlay" class="popup-overlay"></div>
+        <div id="details-popup" class="popup">
+            <button id="popup-close" class="popup-close-btn">&times;</button>
+            <h3 id="popup-title" class="popup-title">Details</h3>
+            <div id="popup-content" class="popup-content">
+                <!-- Scores will be inserted here by JS -->
+            </div>
+        </div>
+    </body>
+</html>
