@@ -1,0 +1,341 @@
+/* --- REMOVE PREVIOUS INLINE DETAIL STYLES --- */
+/* Remove rules for:
+   .combined-details-container
+   .detail-section
+   .notebook-details .detail-labels, etc.
+   .quiz-details .detail-labels, etc.
+   .detail-labels, .detail-values
+   .detail-item
+*/
+
+/* --- POPUP STYLES --- */
+
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Cover entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Position relative to viewport */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Max width */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Above overlay */
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    line-height: 1;
+    color: #aaa;
+    cursor: pointer;
+}
+.popup-close-btn:hover {
+    color: #333;
+}
+
+.popup-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+.popup-content {
+    font-size: 0.95em;
+}
+
+.popup-score-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+.popup-score-item:last-child {
+    border-bottom: none;
+}
+
+.popup-label {
+    color: #555;
+    font-weight: 500;
+}
+
+.popup-value {
+    color: #000;
+}
+
+/* Ensure clickable cells still look clickable */
+.notebook-avg-cell, .quiz-avg-cell {
+    cursor: pointer;
+}
+.clickable-avg.expanded { /* Keep this if you still visually highlight clicked cells */
+   font-weight: bold;
+   /* Or remove if not needed */
+}
+
+/* --- SCORE BAR STYLES --- */
+
+/* Container for bar + text in Notebook/Quiz cells */
+.score-cell-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6px; /* Slightly increased radius for thicker bar */
+}
+
+/* The visual bar itself (behind the text) */
+.score-bar {
+    height: 100%;
+    border-radius: 6px; /* Match container radius */
+    transition: width 0.3s ease-in-out;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* Text displayed in Notebook/Quiz cells */
+.score-cell-text {
+    position: relative;
+    z-index: 2;
+    font-size: 1.1em; /* << REDUCED font size from 1.3em */
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Specific gradients for each type */
+.notebook-bar {
+    /* Lighter green gradient */
+    background-image: linear-gradient(to right, #C8F0C8, #90D990);
+}
+.quiz-bar {
+    /* Lighter purple gradient */
+    background-image: linear-gradient(to right, #D9CDEB, #BDA8E0);
+}
+
+
+/* Adjust cell height */
+.tabulator-cell.notebook-avg-cell,
+.tabulator-cell.quiz-avg-cell {
+    padding: 0;
+    height: 48px; /* << INCREASED HEIGHT for thicker bars */
+    box-sizing: border-box;
+}
+
+
+/* --- RING FORMATTER STYLES --- */
+/* ... .ring-formatter-container, .progress-ring styles ... */
+.ring-formatter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.progress-ring {
+    flex-shrink: 0;
+}
+
+.progress-ring circle {
+    fill: none;
+}
+
+.progress-ring-bg {
+    stroke: #e6e6e6;
+    stroke-linecap: round;
+}
+
+.progress-ring-bar {
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+
+.ring-formatter-text {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1;
+}
+
+/* ... .tabulator-cell[tabulator-field="avg_acc"] styles ... */
+.tabulator-cell[tabulator-field="avg_acc"] {
+     padding: 1px 2px;
+     min-height: 45px;
+}
+
+
+/* --- POPUP STYLES (Keep as is) --- */
+/* ... existing popup styles ... */
+
+/* --- MODEL TYPE ICONS --- */
+/* Adjust overall table font size */
+.table {
+    font-size: 0.6em; /* Reduce font size further */
+    line-height: 1; /* Reduce line height further */
+}
+
+
+/* Reduce padding in table cells */
+.table th,
+.table td {
+    padding-top: 0.2em;    /* Reduce top padding significantly */
+    padding-bottom: 0.2em; /* Reduce bottom padding significantly */
+    padding-left: 0.6em;   /* Optionally reduce horizontal padding slightly */
+    padding-right: 0.6em;
+    vertical-align: middle;
+}
+
+/* Ensure header padding is also reduced */
+.table thead th {
+    padding-top: 0.3em;    /* Reduce header padding */
+    padding-bottom: 0.3em;
+    line-height: 1.2;       /* Match reduced line height */
+}
+
+
+/* Base style for all model type icons */
+.model-icon {
+    margin-right: 5px;  /* Space between icon and model name text */
+    font-size: 0.9em;   /* Make icon slightly smaller than text */
+    color: #666;       /* Default icon color (grey) */
+    width: 1.1em;       /* Consistent width for alignment */
+    text-align: center; /* Center icon within its space */
+    vertical-align: middle; /* Align icon vertically with text */
+}
+
+/* Style for Proprietary model icons (lock icon) */
+.proprietary-icon {
+    color: #a87f0a; /* Gold/Orange color */
+}
+
+/* Style for Open Source model icons (open box icon) */
+.open-source-icon {
+    color: #3a8a47; /* Green color */
+}
+
+/* Style for Base LLM icons (brain icon) */
+.llm-icon {
+    color: #4a6e9a; /* Blue color */
+}
+
+/* Style for model links in the table */
+.tabulator-cell[tabulator-field="model"] a {
+    color: inherit; /* Make link color same as surrounding text */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Optional: Add underline on hover */
+.tabulator-cell[tabulator-field="model"] a:hover {
+    text-decoration: underline;
+}
+
+/* --- DATA TABLE STYLING --- */
+
+/* Basic table setup */
+.data-table {
+    width: 100%;                /* Make table take full container width */
+    border-collapse: collapse;  /* Collapse borders into a single line */
+    margin-top: 20px;           /* Add some space above the table */
+    margin-bottom: 10px;        /* Add space below before the caption */
+    font-size: 0.9em;           /* Slightly smaller font for density */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Table header (th) and data cell (td) styling */
+.data-table th,
+.data-table td {
+    padding: 10px 12px;        /* Add padding inside cells (vertical, horizontal) */
+    text-align: left;          /* Align text to the left by default */
+    border-bottom: 1px solid #ddd; /* Light grey bottom border for rows */
+    vertical-align: middle;    /* Align cell content vertically */
+}
+
+/* Header specific styling */
+.data-table thead th {
+    background-color: #f2f2f2; /* Light grey background for header */
+    font-weight: bold;         /* Make header text bold */
+    border-bottom-width: 2px;  /* Make header bottom border slightly thicker */
+    border-top: 1px solid #ddd; /* Add a top border to the header */
+    white-space: nowrap;       /* Prevent header text from wrapping */
+}
+
+/* Center align specific header texts if needed (adjust indices) */
+.data-table thead th:nth-child(3), /* # Video */
+.data-table thead th:nth-child(4), /* # Ave. Duration */
+.data-table thead th:nth-child(5), /* Caption Number */
+.data-table thead th:nth-child(6), /* Caption # Word */
+.data-table thead th:nth-child(7), /* Caption # Vocab. */
+.data-table thead th:nth-child(8), /* Caption Ave. Length */
+.data-table thead th:nth-child(9), /* QA Number */
+.data-table thead th:nth-child(10) { /* QA Type */
+    text-align: center;
+}
+
+
+/* Center align numeric data cells (adjust indices as needed) */
+.data-table tbody td:nth-child(3), /* # Video */
+.data-table tbody td:nth-child(4), /* # Ave. Duration */
+.data-table tbody td:nth-child(5), /* Caption Number */
+.data-table tbody td:nth-child(6), /* Caption # Word */
+.data-table tbody td:nth-child(7), /* Caption # Vocab. */
+.data-table tbody td:nth-child(8), /* Caption Ave. Length */
+.data-table tbody td:nth-child(9) { /* QA Number */
+    text-align: center;
+}
+
+/* Alternating row colors (striping) */
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Very light grey for even rows */
+}
+
+/* Hover effect for rows */
+.data-table tbody tr:hover {
+    background-color: #f1f1f1; /* Slightly darker grey on hover */
+}
+
+/* Styling for the highlighted row */
+.data-table tr.highlight-row {
+    background-color: #e7f3ff; /* Light blue background */
+    font-weight: bold;         /* Make text bold */
+}
+
+.data-table tr.highlight-row:hover {
+    background-color: #d0e8ff; /* Slightly darker blue on hover */
+}
+
+/* Ensure strong tag inside highlight row doesn't double-bold (if needed) */
+.data-table tr.highlight-row strong {
+    font-weight: bold; /* Explicitly set to bold, usually default anyway */
+}
+
+/* --- END DATA TABLE STYLING --- */
