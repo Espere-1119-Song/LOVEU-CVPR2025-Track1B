@@ -401,35 +401,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     frozen: true,
                     formatter: function(cell, formatterParams, onRendered) {
                         const modelName = cell.getValue();
-                        const rowData = cell.getRow().getData();
-                        const modelType = rowData.model_type;
-                        const modelUrl = rowData.model_url; // Get the URL from data
-
-                        let iconHtml = '';
-                        let iconTitle = '';
-
-                        if (modelType === 'proprietary') {
-                            iconHtml = '<i class="fas fa-lock model-icon proprietary-icon"></i> ';
-                            iconTitle = 'Proprietary Model';
-                        } else if (modelType === 'open-source') {
-                            iconHtml = '<i class="fas fa-box-open model-icon open-source-icon"></i> ';
-                            iconTitle = 'Open Source Model';
-                        } else if (modelType === 'llm') {
-                            iconHtml = '<i class="fas fa-brain model-icon llm-icon"></i> ';
-                            iconTitle = 'Base LLM';
-                        }
-
-                        // Content with icon and name
-                        const content = `${iconHtml}${modelName}`;
-
-                        // If a URL exists, wrap the content in a link
-                        if (modelUrl) {
-                            // Use target="_blank" to open in new tab, rel="noopener noreferrer" for security
-                            return `<a href="${modelUrl}" target="_blank" rel="noopener noreferrer" title="${iconTitle}: ${modelName}">${content}</a>`;
-                        } else {
-                            // Otherwise, just return the content in a span with the title
-                            return `<span title="${iconTitle}: ${modelName}">${content}</span>`;
-                        }
+                        // <<< Removed logic for adding icons/links based on model type >>>
+                        // <<< Now simply returns the model name >>>
+                        return modelName;
                     }
                 },
                 // Model Size column
